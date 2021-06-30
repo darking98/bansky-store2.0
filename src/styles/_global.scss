@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: roboto;
+}
+
+body{
+    background-color: #121212;
+}
+
+@keyframes menu {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
