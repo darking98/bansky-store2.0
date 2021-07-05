@@ -1,73 +1,68 @@
 header{
     width: 100%;
     position: fixed;
-    padding: 30px;
+    height: 7vh;
+    padding: 10px 30px;
+
     nav{
         height: 100%;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        color: #fff;
-        font-size: 18px;
         .nav-items{
             display: flex;
-            
             &-ul{
                 display: flex;
                 list-style:none;
-
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: 600;
+                letter-spacing: 1px;
                 &>li{
                     position: relative;
                     display: flex;
                     align-items: center;
                     margin-right: 20px;
                     cursor: pointer;
-                    padding: 30px 0px;
-                    &:hover>.nav-sub-items-ul{
-                        display: flex;
-                    }
-                    svg{
-                        margin-left:10px;
-                    }
 
-                    &:nth-child(2)>.nav-sub-items-ul{
-                        width: 400px;
-                        left:-100%;
-                    }
-
-                    .nav-sub-items-ul{
-                        position: absolute;
-                        top: 100%;
-                        left:-50%;
-                        display: none;
-                        flex-direction: column;
-                        padding: 30px;
-                        animation: menu 300ms ease-in-out;
-                        background-color: #121212;
-                        box-shadow: 1px -1px 76px 0px rgba(255,255,255,0.2);
-                        li{
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: center;
-                            padding: 30px;
-                            font-weight: 600;
-                            opacity: 0.7;
-                            transition: 300ms ease-in-out;
-                            border-radius:10px;
-                            &:hover{
-                                background-color: gray;
-                                opacity: 1;
-                            }
-                        }
+                    &:hover{
+                        text-decoration: underline;
                     }
                 }
             }
         }
-        .nav-cart{
-            svg{
-                cursor: pointer;
-                font-size: 20px;
-            }
+        .nav-logo{
+            flex: 1;
+            text-align: center;
         }
+        .nav-items-icons{
+            display: flex;
+            align-items: center;
+
+            svg{
+                font-size: 30px;
+                margin-left: 20px;
+                cursor: pointer;                        
+            }
+
+            .nav-cart{
+                display: flex;
+                align-items: center;
+                position: relative;
+        
+                    &-open{
+                        position: absolute;
+                        top: 100%;
+                        right: 0%;
+                        background-color: black;
+                        color: #fff;
+                        width: 400px;
+                        text-align: end;
+                        animation: menu 300ms ease-in-out;
+                    }
+                }
+        }
+
     }
 }
