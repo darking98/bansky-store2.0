@@ -1,9 +1,17 @@
 import React from 'react'
+import ItemProduct from './ItemProduct'
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = () => {
+
     return (
         <div className="item-list-container">
-            <h1>{greeting}</h1>
+            <ItemProduct />
+            <ItemProduct />
+            <ItemProduct />
+            <ItemProduct />
+            <ItemProduct />
+            <ItemProduct />
+            <ItemProduct />
         </div>
     )
 }

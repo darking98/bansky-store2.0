@@ -125,12 +125,108 @@ header nav .nav-items-icons .nav-cart-open {
 .item-list-container {
   height: 100vh;
   width: 100%;
-  padding: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  padding: 100px 200px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.card-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.28);
+          box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.28);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.card-product > div {
+  margin: 10px 0px;
+}
+
+.card-product-title {
+  font-size: 15px;
+  text-align: center;
+}
+
+.card-product-add-cart {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-product-counter {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 0px 20px;
+}
+
+.card-product-counter button {
+  background: none;
+  border: none;
+  color: blue;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.card-product-add-button {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.card-product-add-button button {
+  width: 100%;
+  background: none;
+  border: 1px solid blue;
+  color: blue;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=styles.css.map */
