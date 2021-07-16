@@ -1,17 +1,16 @@
 import React from 'react'
 import ItemProduct from './ItemProduct'
+import { products } from '../products/products'
 
 const ItemListContainer = () => {
 
     return (
         <div className="item-list-container">
-            <ItemProduct />
-            <ItemProduct />
-            <ItemProduct />
-            <ItemProduct />
-            <ItemProduct />
-            <ItemProduct />
-            <ItemProduct />
+            {
+                products.map(product => (
+                    <ItemProduct product = {product}/>
+                ))
+            }
         </div>
     )
 }
