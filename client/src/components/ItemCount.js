@@ -17,9 +17,10 @@ const itemCount = ({counter, setCounter}) => {
                     <h4>{counter}</h4>
                 <button onClick={handleCounter}>+</button>
             </div>
-            <div className="card-product-add-button">
+            <div className="card-product-button-container">
                 <button>Add to cart</button>
             </div>
+            
         </div>
     )
 }

@@ -1,11 +1,13 @@
 import React, {useState, useEffect} from 'react'
 import ItemCount from './ItemCount'
 
-const ItemProduct = ({product}) => {
+const ItemProduct = ({product, setDetail}) => {
 
     const [counter, setCounter] = useState(1);
     
-    
+    const handleDetail = () => {
+        setDetail(product)
+    }
 
     return (
         <div className="card-product">
@@ -17,6 +19,9 @@ const ItemProduct = ({product}) => {
             </div>
             <div className="card-product-price">
                 <h4>{`$ ${counter >= 1 ? counter * product.price : product.price}.00`}</h4>
+            </div>
+            <div className="card-product-button-container">
+                <button onClick={handleDetail} >See Details</button>
             </div>
             <ItemCount counter ={counter} setCounter={setCounter}/>
         </div>

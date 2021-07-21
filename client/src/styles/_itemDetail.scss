@@ -1,0 +1,17 @@
+.item-detail-container{
+    height: 100vh;
+    width: 100%;
+    padding: 100px 200px;
+    display: flex;
+    justify-content: space-around;
+
+    .item-detail-image{
+    }
+
+    .item-detail-info{
+        padding: 20px;
+        h2{
+            font-size: 15px;
+        }
+    }
+}

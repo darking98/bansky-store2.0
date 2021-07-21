@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from 'react'
 import ItemProduct from './ItemProduct'
+import ItemDetail from './ItemDetail';
 
 
-const ItemListContainer = () => {
+const ItemListContainer = ({setDetail}) => {
+
 
     const [products, setProducts] = useState([]);
 
@@ -22,7 +24,7 @@ const ItemListContainer = () => {
             {
                 products.length === 0 ? <h2>Loading...</h2> :
                 products.map(product => (
-                    <ItemProduct product = {product}/>
+                    <ItemProduct product = {product} setDetail={setDetail}/>
                 ))
             }
         </div>
