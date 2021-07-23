@@ -1,26 +1,66 @@
 [
     {
+        "id":"1",
         "title": "Campera Adidas Hombre Rompevientos Essential",
         "image": "https://www.bompie.com.ar/media/catalog/product/cache/1e7c11b43132c034d445b386916b52f7/g/d/gd5480_app_photo_front-center_white.jpg",
         "price": "8199",
+        "gender":"men",
         "stock": "2"
     },
     {
+        "id":"2",
         "title": "Buzo Reebok Hombre Training Essentials Linear Logo",
         "image": "https://www.bompie.com.ar/media/catalog/product/cache/1e7c11b43132c034d445b386916b52f7/f/k/fk6115_app_photo_standard_white.jpg",
         "price": "8049",
+        "gender":"men",
         "stock": "5"
     },
     {
+        "id":"3",
         "title": "Shorts Reebok Hombre Training Essentials Utility",
         "image": "https://www.bompie.com.ar/media/catalog/product/cache/1e7c11b43132c034d445b386916b52f7/f/u/fu3282_app_virtual_standard_white.jpg",
         "price": "4299",
+        "gender":"men",
         "stock": "4"
     },
     {
+        "id":"4",
         "title": "Zapatillas Kappa Hombre Banda Gedir",
         "image": "https://www.bompie.com.ar/media/catalog/product/cache/1e7c11b43132c034d445b386916b52f7/1/0/103-1311951.jpg",
         "price": "7399",
+        "gender":"men",
+        "stock": "5"
+    },
+    {
+        "id":"5",
+        "title": "Musculosa Negra Adidas Originals Tank",
+        "image": "https://static.dafiti.com.ar/p/adidas-2317-511436-1-product.jpg",
+        "price": "4439",
+        "gender":"women",
+        "stock": "5"
+    },
+    {
+        "id":"6",
+        "title": "Campera Negra adidas Essentials Linear",
+        "image": "https://static.dafiti.com.ar/p/adidas-9328-479266-1-product.jpg",
+        "price": "5599",
+        "gender":"women",
+        "stock": "5"
+    },
+    {
+        "id":"7",
+        "title": "Vestido Modelador Negro Mora Reductor",
+        "image": "https://static.dafiti.com.ar/p/mora-0658-838175-1-product.jpg",
+        "price": "2215",
+        "gender":"women",
+        "stock": "5"
+    },
+    {
+        "id":"8",
+        "title": "Calza Negra Reebok Workout Ready",
+        "image": "https://static.dafiti.com.ar/p/reebok-1971-587796-1-product.jpg",
+        "price": "4439",
+        "gender":"women",
         "stock": "5"
     }
 ] 

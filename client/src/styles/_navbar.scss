@@ -1,6 +1,6 @@
 header{
     width: 100%;
-    position: fixed;
+    //position: fixed;
     height: 7vh;
     padding: 10px 30px;
 
@@ -26,9 +26,15 @@ header{
                     margin-right: 20px;
                     cursor: pointer;
 
-                    &:hover{
-                        text-decoration: underline;
+                    a{
+                        text-decoration: none;
+                        color: black;
+                        &:hover{
+                            text-decoration: underline;
+                        }
                     }
+
+                    
                 }
             }
         }

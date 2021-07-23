@@ -1,30 +1,35 @@
 import React, {useEffect, useState} from 'react'
 import ItemProduct from './ItemProduct'
 import ItemDetail from './ItemDetail';
+import { getCategory } from '../fetch/getItems';
+import { useParams } from 'react-router';
 
 
-const ItemListContainer = ({setDetail}) => {
+const ItemListContainer = () => {
 
 
     const [products, setProducts] = useState([]);
 
-    const getCategory = async () =>{
-        let llamada = fetch(`http://localhost:4000/products`);
-        llamada = await llamada;
-        llamada = await llamada.text();
-        setProducts(JSON.parse(llamada));
-    }
+    const { id } = useParams()
+
 
     useEffect(()=>{
-        getCategory();
-    },[])
+        if(id !== undefined){
+        
+            getCategory().then(res => setProducts(res.filter(element => element.gender ===id )))
+        }else{
+            getCategory().then(res => setProducts(res))
+
+        }
+    },[id])
+
 
     return (
         <div className="item-list-container">
             {
                 products.length === 0 ? <h2>Loading...</h2> :
                 products.map(product => (
-                    <ItemProduct product = {product} setDetail={setDetail}/>
+                    <ItemProduct product = {product}/>
                 ))
             }
         </div>

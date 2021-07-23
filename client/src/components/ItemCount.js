@@ -1,11 +1,11 @@
 import React from 'react'
 
-const itemCount = ({counter, setCounter}) => {
+const itemCount = ({counter, setCounter, stock}) => {
 
     const handleCounter = (e) => {
         if(e.target.innerText === '-' && counter !== 1){
             setCounter(counter - 1)
-        }else if(e.target.innerText === '+'){
+        }else if(e.target.innerText === '+' && counter < stock){
             setCounter(counter+1);
         }
     }

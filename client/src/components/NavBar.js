@@ -2,8 +2,9 @@ import React,{useState} from 'react'
 import {FaShoppingCart} from 'react-icons/fa'
 import {VscAccount} from 'react-icons/vsc'
 import CartMenu from './CartMenu'
+import { Link } from 'react-router-dom'
 
-const NavBar = ({}) => {
+const NavBar = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
     return (
@@ -12,9 +13,9 @@ const NavBar = ({}) => {
                 
                 <div className="nav-items">
                     <ul className="nav-items-ul ">
-                        <li>Men</li>
-                        <li>Women</li>
-                        <li>New Arraivals</li>
+                        <li><Link to='/category/men'>Men</Link></li>
+                        <li><Link to='/category/women'>Women</Link></li>
+                        <li><Link to={'/products'}>New Arraivals</Link></li>
                     </ul>
                 </div>
 
@@ -23,8 +24,8 @@ const NavBar = ({}) => {
                     </div>
                     <div className="nav-items">
                         <ul className="nav-items-ul ">
-                            <li>Stores</li>
-                            <li>Social</li>
+                            <li><Link to={'/products'}>Stores</Link></li>
+                            <li><Link to={'/products'}>Social</Link></li>
                         </ul>
                     </div>
                    

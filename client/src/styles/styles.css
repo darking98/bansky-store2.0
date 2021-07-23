@@ -26,7 +26,6 @@
 
 header {
   width: 100%;
-  position: fixed;
   height: 7vh;
   padding: 10px 30px;
 }
@@ -74,7 +73,12 @@ header nav .nav-items-ul > li {
   cursor: pointer;
 }
 
-header nav .nav-items-ul > li:hover {
+header nav .nav-items-ul > li a {
+  text-decoration: none;
+  color: black;
+}
+
+header nav .nav-items-ul > li a:hover {
   text-decoration: underline;
 }
 
