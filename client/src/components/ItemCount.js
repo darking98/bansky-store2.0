@@ -11,13 +11,13 @@ const itemCount = ({counter, setCounter, stock}) => {
     }
 
     return (
-        <div className="card-product-add-cart">
-            <div className="card-product-counter">
+        <div className="detail-add-cart">
+            <div className="detail-counter">
                 <button onClick={handleCounter}>-</button>
                     <h4>{counter}</h4>
                 <button onClick={handleCounter}>+</button>
             </div>
-            <div className="card-product-button-container">
+            <div className="detail-button-container">
                 <button>Add to cart</button>
             </div>
             
