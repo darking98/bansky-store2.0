@@ -31,6 +31,7 @@ const CartProvider = ({children}) => {
 
     const removeAllItems = () => {
         setCartProducts([]);
+        setCartCounter(0)
     }
 
     return (
