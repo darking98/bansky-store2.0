@@ -1,4 +1,4 @@
-import React,{useContext} from 'react'
+import React,{useContext, useEffect} from 'react'
 import { CartContext } from '../context/Context'
 import {AiFillCloseCircle} from 'react-icons/ai'
 import {IoMdRemoveCircleOutline} from 'react-icons/io'
@@ -6,6 +6,12 @@ const CartMenu = ({setOpenMenu,openMenu, children}) => {
 
     const { cartProducts, cartCounter, removeItem, removeAllItems } = useContext(CartContext);
     console.log(cartCounter)
+
+
+    
+    useEffect(() => {
+        console.log(cartProducts)
+    }, [cartProducts])
 
     return (
         <div className="nav-cart">

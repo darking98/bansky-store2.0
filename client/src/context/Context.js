@@ -6,22 +6,26 @@ const CartProvider = ({children}) => {
     
     const [cartProducts, setCartProducts] = useState([]);
     const [cartCounter, setCartCounter] = useState(0);
+    const [hideCounter, setHideCounter] = useState(false)
 
     const addToCart = (item, qty) => {
-        if (cartProducts.find(product => product.title === item.title)) {
-            const copy = [...cartProducts];
-            const repeteadIndex = cartProducts.findIndex(
-              product => product.title === item.title
-            );
-            copy[repeteadIndex] = {
-              ...copy[repeteadIndex],
-              qty: copy[repeteadIndex].qty + qty
-            };
-            setCartProducts(copy);
-          } else {
-            setCartProducts([...cartProducts, { ...item, qty }]);
-          }
-          setCartCounter(prev => prev + qty);
+      if(cartProducts.find(product => product.qty + qty > item.stock))return 
+      if (cartProducts.find(product => product.title === item.title)) {
+        const copy = [...cartProducts];
+        const repeteadIndex = cartProducts.findIndex(
+          product => product.title === item.title
+        );
+        copy[repeteadIndex] = {
+          ...copy[repeteadIndex],
+          qty: copy[repeteadIndex].qty + qty
+        };
+        setCartProducts(copy);
+        } else {
+          setCartProducts([...cartProducts, { ...item, qty }]);
+        }
+      setCartCounter(prev => prev + qty);
+
+      setHideCounter(!hideCounter)
     }
 
     const removeItem = (item) => {
@@ -35,7 +39,7 @@ const CartProvider = ({children}) => {
     }
 
     return (
-        <CartContext.Provider value={{cartProducts, cartCounter, addToCart, removeItem, removeAllItems}}>
+        <CartContext.Provider value={{cartProducts, cartCounter, hideCounter, addToCart, removeItem, removeAllItems, setHideCounter }}>
             {children}
         </CartContext.Provider>
     )

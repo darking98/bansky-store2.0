@@ -5,6 +5,8 @@ import ItemDetail from "./components/ItemDetail";
 import Home from "./components/Home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import CartProvider from "./context/Context";
+import Cart from "./components/Cart";
+
 function App() {
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -18,6 +20,7 @@ function App() {
             <Route path={"/products"} component={ItemListContainer} />
             <Route path={"/category/:id"} component={ItemListContainer} />
             <Route path={"/product/:id"} component={ItemDetail} />
+            <Route path ={"/cart"} component ={Cart}/>
           </Switch>
         </div>
       </Router>
