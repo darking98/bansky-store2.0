@@ -1,6 +1,10 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { CartContext } from '../context/Context'
 
-const itemCount = ({counter, setCounter, stock}) => {
+
+const ItemCount = ({counter, setCounter, stock, product}) => {
+
+    const { addToCart } = useContext(CartContext);
 
     const handleCounter = (e) => {
         if(e.target.innerText === '-' && counter !== 1){
@@ -18,11 +22,11 @@ const itemCount = ({counter, setCounter, stock}) => {
                 <button onClick={handleCounter}>+</button>
             </div>
             <div className="detail-button-container">
-                <button>Add to cart</button>
+                <button onClick={() => addToCart(product, counter)}>Add to cart</button>
             </div>
             
         </div>
     )
 }
 
-export default itemCount
+export default ItemCount

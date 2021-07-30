@@ -1,11 +1,10 @@
-import React,{useState} from 'react'
+import React from 'react'
 import {FaShoppingCart} from 'react-icons/fa'
 import {VscAccount} from 'react-icons/vsc'
 import CartMenu from './CartMenu'
 import { Link } from 'react-router-dom'
 
-const NavBar = () => {
-  const [openMenu, setOpenMenu] = useState(false);
+const NavBar = ({openMenu, setOpenMenu}) => {
 
     return (
         <header>
@@ -31,7 +30,7 @@ const NavBar = () => {
                    
                     <div className="nav-items-icons">
                         <VscAccount/>
-                        <CartMenu openMenu={openMenu}>
+                        <CartMenu openMenu={openMenu} setOpenMenu ={setOpenMenu}>
                             <FaShoppingCart
                                 onClick={() => setOpenMenu(!openMenu)}
                             />

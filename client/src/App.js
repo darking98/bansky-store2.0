@@ -1,28 +1,27 @@
-import React,{useState} from 'react';
-import NavBar from './components/NavBar'
-import ItemListContainer from './components/ItemListContainer';
-import ItemDetail from './components/ItemDetail';
-import Home from './components/Home';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-
+import React, { useState } from "react";
+import NavBar from "./components/NavBar";
+import ItemListContainer from "./components/ItemListContainer";
+import ItemDetail from "./components/ItemDetail";
+import Home from "./components/Home";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import CartProvider from "./context/Context";
 function App() {
-
-  const [detail, setDetail] = useState([])
+  const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <>
-    <Router>
-      <NavBar/>
-      <Switch>
-        <Route path={'/'} exact component={Home}/>
-        <Route path={'/products'} component ={ItemListContainer} />
-        <Route path ={'/category/:id'} component={ItemListContainer}/>
-        <Route path={'/product/:id'} component={ItemDetail}/>
-      </Switch>
-
-    </Router>
-
-    </>
+    <CartProvider>
+      <Router>
+        <NavBar openMenu={openMenu} setOpenMenu={setOpenMenu} />
+        <div className={openMenu && 'dark-background'}>
+          <Switch>
+            <Route path={"/"} exact component={Home} />
+            <Route path={"/products"} component={ItemListContainer} />
+            <Route path={"/category/:id"} component={ItemListContainer} />
+            <Route path={"/product/:id"} component={ItemDetail} />
+          </Switch>
+        </div>
+      </Router>
+    </CartProvider>
   );
 }
 

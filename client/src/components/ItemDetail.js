@@ -29,6 +29,7 @@ const ItemDetail = () => {
                 counter={counter}
                 setCounter={setCounter}
                 stock={product.stock}
+                product={product}
             />
           </div>
           

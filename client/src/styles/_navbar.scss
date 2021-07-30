@@ -3,6 +3,7 @@ header{
     //position: fixed;
     height: 7vh;
     padding: 10px 30px;
+    position: relative;
 
     nav{
         height: 100%;
@@ -55,15 +56,15 @@ header{
             .nav-cart{
                 display: flex;
                 align-items: center;
-                position: relative;
-        
+                
                     &-open{
-                        position: absolute;
-                        top: 100%;
-                        right: 0%;
+                        position: fixed;
+                        top: 0;
+                        right: 0;
+                        width: 400px;
+                        height: 100vh;
                         background-color: black;
                         color: #fff;
-                        width: 400px;
                         text-align: end;
                         animation: menu 300ms ease-in-out;
                     }

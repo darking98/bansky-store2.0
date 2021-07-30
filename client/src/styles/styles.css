@@ -6,6 +6,10 @@
   font-family: roboto;
 }
 
+.dark-background {
+  background-color: rgba(51, 41, 39, 0.5);
+}
+
 @-webkit-keyframes menu {
   from {
     opacity: 0;
@@ -28,6 +32,7 @@ header {
   width: 100%;
   height: 7vh;
   padding: 10px 30px;
+  position: relative;
 }
 
 header nav {
@@ -111,16 +116,16 @@ header nav .nav-items-icons .nav-cart {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
 }
 
 header nav .nav-items-icons .nav-cart-open {
-  position: absolute;
-  top: 100%;
-  right: 0%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
   background-color: black;
   color: #fff;
-  width: 400px;
   text-align: end;
   -webkit-animation: menu 300ms ease-in-out;
           animation: menu 300ms ease-in-out;
