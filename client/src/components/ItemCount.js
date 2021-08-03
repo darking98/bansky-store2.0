@@ -1,11 +1,8 @@
-import React, {useContext} from 'react'
-import { CartContext } from '../context/Context'
-import { Link } from 'react-router-dom';
+import React from 'react'
 
 
-const ItemCount = ({counter, setCounter, stock, product}) => {
+const ItemCount = ({stock,onAdd, counter, setCounter}) => {
 
-    const { addToCart, hideCounter, setHideCounter } = useContext(CartContext);
 
     const handleCounter = (e) => {
         if(e.target.innerText === '-' && counter !== 1){
@@ -13,7 +10,6 @@ const ItemCount = ({counter, setCounter, stock, product}) => {
         }else if(e.target.innerText === '+' && counter < stock){
             setCounter(counter+1);
         }
-        setHideCounter(false)
     }
 
 
@@ -24,13 +20,8 @@ const ItemCount = ({counter, setCounter, stock, product}) => {
                     <h4>{counter}</h4>
                 <button onClick={handleCounter}>+</button>
             </div>
-            <div className="detail-button-container">
-                {
-                    hideCounter ? <p>Tu carrito de compras ya fue actualizado, para terminar con tu compra hacé <Link to="/cart">click acá.</Link></p>
-                    :
-                    <button onClick={() => addToCart(product, counter)}>Add to cart</button>
-
-                }
+            <div className="detail-button-container" style={{width:'200px'}}>
+                <button onClick={onAdd}>Add to cart</button>
             </div>
             
         </div>

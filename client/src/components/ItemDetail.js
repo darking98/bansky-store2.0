@@ -1,44 +1,48 @@
-import React, { useState, useEffect, useContext } from "react";
-import { useParams } from "react-router";
-import { CartContext } from "../context/Context";
-import { getCategory } from "../fetch/getItems";
+import React, {useContext, useState, useEffect } from "react";
+import { CartContext } from '../context/Context'
+import { Link } from 'react-router-dom';
+
 import ItemCount from "./ItemCount";
 
-const ItemDetail = () => {
+const ItemDetail = ({ product }) => {
 
-  const { id } = useParams();
-  const [product, setProduct] = useState([]);
   const [counter, setCounter] = useState(1);
-  const {setHideCounter} = useContext(CartContext)
-  
+  const [showButton, setShowButton] = useState(false);
+  const { addToCart } = useContext(CartContext);
+
+
+  const onAdd = () => {
+      addToCart(product, counter)
+      setShowButton(true)
+  };
+
   useEffect(() => {
-    getCategory().then((res) =>
-      setProduct(res.find((element) => element.id === id))
-    );
-    setHideCounter(false)
-  }, [id]);
+    setShowButton(false)
+  }, [counter])
 
   return (
     <>
-      {
-        <div className="item-detail-container">
-          <div className="item-detail-image">
-            <img src={product.image} alt="" width="500px" />
-          </div>
-          <div className="item-detail-info">
-            <h2>{product.title}</h2>
-            <p>${counter !== 1 ? product.price * counter : product.price}.00</p>
-            <p>Stock disponible: {product.stock}</p>
-            <ItemCount
-                counter={counter}
-                setCounter={setCounter}
-                stock={product.stock}
-                product={product}
-            />
-          </div>
-          
+      <div className="item-detail-container">
+        <div className="item-detail-image">
+          <img src={product.image} alt="" width="500px" />
         </div>
-      }
+        <div className="item-detail-info">
+          <h2>{product.title}</h2>
+          <p>${product.price}.00</p>
+          <p>Stock disponible: {product.stock}</p>
+
+          <ItemCount
+            counter={counter}
+            setCounter={setCounter}
+            stock={product.stock}
+            onAdd ={onAdd}
+          />
+          {
+            showButton && <Link to="/cart"><button>Finish Buy</button></Link>
+          }
+          <p>{product.description}</p>
+        </div>
+      </div>
     </>
   );
 };

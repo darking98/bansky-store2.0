@@ -3,6 +3,7 @@
         "id":"1",
         "title": "Campera Adidas Hombre Rompevientos Essential",
         "image": "https://www.bompie.com.ar/media/catalog/product/cache/1e7c11b43132c034d445b386916b52f7/g/d/gd5480_app_photo_front-center_white.jpg",
+        "description":"Cuando el clima comienza a enfriarse, asegurate de protegerte bien con este rompevientos adidas. Está hecho en un tejido fabricado a partir de materiales reciclados en un esfuerzo por cuidar nuestro planeta. Su diseño con cierre frontal para ponértelo fácil y rápidamente incorpora las 3 Tiras y el logo en las mangas que le confieren el auténtico estilo adidas.",
         "price": "8199",
         "gender":"men",
         "stock": "2"
@@ -11,6 +12,7 @@
         "id":"2",
         "title": "Buzo Reebok Hombre Training Essentials Linear Logo",
         "image": "https://www.bompie.com.ar/media/catalog/product/cache/1e7c11b43132c034d445b386916b52f7/f/k/fk6115_app_photo_standard_white.jpg",
+        "description":"Llegá al gimnasio listo para entrenar. Este buzo con capucha para hombre está hecho de suave felpa francesa para que tus músculos se mantengan abrigados. Conseguí un look deportivo retro gracias a sus bloques de color y su logo Reebok en el pecho. Felpa francesa 80% algodón / 20% poliéster.",
         "price": "8049",
         "gender":"men",
         "stock": "5"
@@ -19,6 +21,7 @@
         "id":"3",
         "title": "Shorts Reebok Hombre Training Essentials Utility",
         "image": "https://www.bompie.com.ar/media/catalog/product/cache/1e7c11b43132c034d445b386916b52f7/f/u/fu3282_app_virtual_standard_white.jpg",
+        "description":"Listos para todo. Trabajá en tus objetivos de entrenamiento con estos shorts livianos de training. Los bolsillos para manos le añaden utilidad al diseño clásico y limpio. Una cintura elástica con cordón de ajuste los mantiene en su lugar. ejido de punto liso 100% nylon.",
         "price": "4299",
         "gender":"men",
         "stock": "4"
@@ -27,6 +30,7 @@
         "id":"4",
         "title": "Zapatillas Kappa Hombre Banda Gedir",
         "image": "https://www.bompie.com.ar/media/catalog/product/cache/1e7c11b43132c034d445b386916b52f7/1/0/103-1311951.jpg",
+        "description":"Calzado urbano de hombre marca Kappa",
         "price": "7399",
         "gender":"men",
         "stock": "5"
@@ -35,6 +39,7 @@
         "id":"5",
         "title": "Musculosa Negra Adidas Originals Tank",
         "image": "https://static.dafiti.com.ar/p/adidas-2317-511436-1-product.jpg",
+        "description":"Musculosa de mujer para training marca Adidas. Descubre dónde están tus límites y supéralos con esta camiseta sin mangas de entrenamiento para mujer. La tecnología Speedwick se pone en acción para mantener tu piel fresca y seca cuando estés tú en acción.",
         "price": "4439",
         "gender":"women",
         "stock": "5"
@@ -43,15 +48,17 @@
         "id":"6",
         "title": "Campera Negra adidas Essentials Linear",
         "image": "https://static.dafiti.com.ar/p/adidas-9328-479266-1-product.jpg",
+        "description":"El cuello alzado y su tejido de punto brillante le aportan un toque retro. Se ha concebido para ofrecerte una absoluta comodidad después de los entrenamientos.",
         "price": "5599",
         "gender":"women",
         "stock": "5"
     },
     {
         "id":"7",
-        "title": "Vestido Modelador Negro Mora Reductor",
-        "image": "https://static.dafiti.com.ar/p/mora-0658-838175-1-product.jpg",
-        "price": "2215",
+        "title": "Remera Topper Mujer Térmica ML",
+        "image": "https://www.bompie.com.ar/media/catalog/product/cache/1e7c11b43132c034d445b386916b52f7/2/-/2-164394.jpg",
+        "description":"El mejor complemento para tus entrenamientos o competencia. Con construcción en tejido suave y ultraligero, que ofrece mejor transpirabilidad gracias a su material absorbente que te mantiene cálido y seco en los días más fríos. Su cuello redondeo y mangas largas te da mayor seguridad y te mantiene enfocado en los momentos de mayor esfuerzo.",
+        "price": "2699",
         "gender":"women",
         "stock": "5"
     },
@@ -59,6 +66,7 @@
         "id":"8",
         "title": "Calza Negra Reebok Workout Ready",
         "image": "https://static.dafiti.com.ar/p/reebok-1971-587796-1-product.jpg",
+        "description":"Calza de mujer para training marca Reebok. Te ofrecen confort y transpirabilidad gracias a su tejido que dispersa el sudor y los revestimientos de malla. Su diseño elástico aporta sujeción y te permite un amplio rango de movimiento en ejercicios como zancadas, saltos y giros.",
         "price": "4439",
         "gender":"women",
         "stock": "5"

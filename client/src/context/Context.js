@@ -6,7 +6,6 @@ const CartProvider = ({children}) => {
     
     const [cartProducts, setCartProducts] = useState([]);
     const [cartCounter, setCartCounter] = useState(0);
-    const [hideCounter, setHideCounter] = useState(false)
 
     const addToCart = (item, qty) => {
       if(cartProducts.find(product => product.qty + qty > item.stock))return 
@@ -23,9 +22,8 @@ const CartProvider = ({children}) => {
         } else {
           setCartProducts([...cartProducts, { ...item, qty }]);
         }
-      setCartCounter(prev => prev + qty);
+      setCartCounter(cartCounter+ qty);
 
-      setHideCounter(!hideCounter)
     }
 
     const removeItem = (item) => {
@@ -39,7 +37,7 @@ const CartProvider = ({children}) => {
     }
 
     return (
-        <CartContext.Provider value={{cartProducts, cartCounter, hideCounter, addToCart, removeItem, removeAllItems, setHideCounter }}>
+        <CartContext.Provider value={{cartProducts, cartCounter, addToCart, removeItem, removeAllItems }}>
             {children}
         </CartContext.Provider>
     )

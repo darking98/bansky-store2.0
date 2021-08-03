@@ -6,12 +6,29 @@
     justify-content: space-around;
 
     .item-detail-image{
+        flex: 1;
     }
 
     .item-detail-info{
+        word-wrap: break-word;
         display: flex;
         flex-direction: column;
         padding: 20px;
+        flex: 1;
+
+        a{
+            align-self: center;
+            button{
+                width: 200px;
+                background:none;
+                border: 1px solid blue;
+                color: blue;
+                padding: 10px 20px;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+        }
+        
         &>*{
             margin-bottom: 40px;
         }
@@ -28,7 +45,7 @@
 
     }
     .detail-counter{
-        width: 100%;
+        width: 200px;
         display: flex;
         justify-content: space-between;
         align-items: center;

@@ -186,7 +186,14 @@ header nav .nav-items-icons .nav-cart-open {
       justify-content: space-around;
 }
 
+.item-detail-container .item-detail-image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
 .item-detail-container .item-detail-info {
+  word-wrap: break-word;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -195,6 +202,25 @@ header nav .nav-items-icons .nav-cart-open {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.item-detail-container .item-detail-info a {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.item-detail-container .item-detail-info a button {
+  width: 200px;
+  background: none;
+  border: 1px solid blue;
+  color: blue;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .item-detail-container .item-detail-info > * {
@@ -223,7 +249,7 @@ header nav .nav-items-icons .nav-cart-open {
 }
 
 .item-detail-container .detail-counter {
-  width: 100%;
+  width: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

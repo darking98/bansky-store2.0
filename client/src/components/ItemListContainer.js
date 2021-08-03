@@ -23,7 +23,7 @@ const ItemListContainer = () => {
       {products.length === 0 ? (
         <h2>Loading...</h2>
       ) : (
-        products.map((product) => <ItemProduct product={product} />)
+        products.map((product) => <ItemProduct key={product.id} product={product} />)
       )}
     </div>
   );
