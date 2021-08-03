@@ -8,8 +8,8 @@ const CartProvider = ({children}) => {
     const [cartCounter, setCartCounter] = useState(0);
 
     const addToCart = (item, qty) => {
-      if(cartProducts.find(product => product.qty + qty > item.stock))return 
       if (cartProducts.find(product => product.title === item.title)) {
+        if(cartProducts.find(product => product.qty + qty > item.stock))return 
         const copy = [...cartProducts];
         const repeteadIndex = cartProducts.findIndex(
           product => product.title === item.title
@@ -22,7 +22,7 @@ const CartProvider = ({children}) => {
         } else {
           setCartProducts([...cartProducts, { ...item, qty }]);
         }
-      setCartCounter(cartCounter+ qty);
+      setCartCounter(prev => prev + qty);
 
     }
 

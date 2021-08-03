@@ -12,8 +12,8 @@ const ItemDetail = ({ product }) => {
 
 
   const onAdd = () => {
-      addToCart(product, counter)
-      setShowButton(true)
+    addToCart(product, counter)
+    setShowButton(true)
   };
 
   useEffect(() => {
