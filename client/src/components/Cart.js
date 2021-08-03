@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Cart = () => {
 
-    const {cartProducts, removeItem, removeAllItems} = useContext(CartContext)
+    const {cartProducts, removeItem} = useContext(CartContext)
 
     return (
         <div style={{display:'flex', flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
