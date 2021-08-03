@@ -1,6 +1,5 @@
-import React, {useEffect, useState, useContext} from "react";
+import React, {useEffect, useState} from "react";
 import { useParams } from "react-router";
-import { CartContext } from "../context/Context";
 import { getCategory } from "../fetch/getItems";
 import ItemDetail from "./ItemDetail";
 
