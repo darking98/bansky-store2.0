@@ -9,11 +9,13 @@ const NavBar = ({openMenu, setOpenMenu}) => {
     return (
         <header>
             <nav>
-                
                 <div className="nav-items">
                     <ul className="nav-items-ul ">
-                        <li><Link to='/category/men'>Men</Link></li>
-                        <li><Link to='/category/women'>Women</Link></li>
+                        <li><Link to='/category/buzo'>Buzos</Link></li>
+                        <li><Link to='/category/campera'>Camperas</Link></li>
+                        <li><Link to ="/category/pantalon">Pantalones</Link></li>
+                        <li><Link to="/category/zapatilla">Zapatillas</Link></li>
+                        <li><Link to ="/category/remera">Remeras</Link></li>
                         <li><Link to={'/products'}>New Arraivals</Link></li>
                     </ul>
                 </div>

@@ -6,13 +6,15 @@ const Cart = () => {
 
     const {cartProducts, removeItem} = useContext(CartContext)
 
+    console.log(cartProducts)
+
     return (
         <div style={{display:'flex', flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
             {
                 cartProducts.length ? 
                 cartProducts.map(product => (
                     <div style={{display:"flex", alignItems:"center", width:"100%", justifyContent:"center"}}>
-                        <img src={product.image} alt="" width="100px"/>
+                        <img src={product.imageId} alt="" width="100px"/>
                         <h2 style={{fontSize:"15px"}}>{product.title} x{product.qty}</h2>
                         <button onClick={() => removeItem(product)}>Delete</button>
                     </div>

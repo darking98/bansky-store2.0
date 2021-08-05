@@ -24,7 +24,7 @@ const ItemDetail = ({ product }) => {
     <>
       <div className="item-detail-container">
         <div className="item-detail-image">
-          <img src={product.image} alt="" width="500px" />
+          <img src={product.imageId} alt="" width="500px" />
         </div>
         <div className="item-detail-info">
           <h2>{product.title}</h2>

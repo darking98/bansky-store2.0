@@ -2,19 +2,45 @@ import React, { useEffect, useState } from "react";
 import ItemProduct from "./ItemProduct";
 import { getCategory } from "../fetch/getItems";
 import { useParams } from "react-router";
+import { getFirestore } from "../firebase/firebase";
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
 
   const { id } = useParams();
 
+
   useEffect(() => {
-    if (id !== undefined) {
-      getCategory().then((res) =>
-        setProducts(res.filter((element) => element.gender === id))
-      );
-    } else {
-      getCategory().then((res) => setProducts(res));
+    const firestore = getFirestore()
+    const collection = firestore.collection('products')
+    if(!id){
+      const query = collection.get()
+
+      query
+        .then(snapshot => {
+          const documents = snapshot.docs
+          const products = documents.map(doc => {
+            return {id:doc.id, ...doc.data()}
+          })
+          setProducts(products)
+        })
+        .catch(error => {
+          console.error(error)
+        })
+    }else{
+      let query = collection.where('categoryId', '==', id)
+      query = query.get()
+      query
+        .then(snapshot => {
+          const documents = snapshot.docs
+          const products = documents.map(doc => {
+            return {id:doc.id, ...doc.data()}
+          })
+          setProducts(products)
+        })
+        .catch(error => {
+          console.error(error)
+        })
     }
   }, [id]);
 
