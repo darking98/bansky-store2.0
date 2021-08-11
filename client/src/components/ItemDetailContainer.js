@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { useParams } from "react-router";
 import { useHistory } from "react-router-dom";
-import { getCategory } from "../fetch/getItems";
 import { getFirestore } from "../firebase/firebase";
 import ItemDetail from "./ItemDetail";
 
