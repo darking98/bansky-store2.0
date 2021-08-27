@@ -13,10 +13,9 @@ Para la ejecución de la aplicación se necesitan dos comandos :
 Para correr la aplicación en el front-end
 se abrirá en la ventana [http://localhost:3000](http://localhost:3000) del browser.
 
-### `npm run dev`
+### `Firebase Firestore`
 
-Para correr la aplicación en el back-end.
-Los cambios en el servidor se van a guardar automaticamente y se verán reflejados al instante.
+La base de datos esta integrada a firebaseFirestore.
 
 ### Screenshots
 
