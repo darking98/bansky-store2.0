@@ -1,24 +1,22 @@
-import React, {useContext, useState, useEffect } from "react";
-import { CartContext } from '../context/Context'
-import { Link } from 'react-router-dom';
+import React, { useContext, useState, useEffect } from "react";
+import { CartContext } from "../context/Context";
+import { Link } from "react-router-dom";
 
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ product }) => {
-
   const [counter, setCounter] = useState(1);
   const [showButton, setShowButton] = useState(false);
   const { addToCart } = useContext(CartContext);
 
-
   const onAdd = () => {
-    addToCart(product, counter)
-    setShowButton(true)
+    addToCart(product, counter);
+    setShowButton(true);
   };
 
   useEffect(() => {
-    setShowButton(false)
-  }, [counter])
+    setShowButton(false);
+  }, [counter]);
 
   return (
     <>
@@ -35,11 +33,13 @@ const ItemDetail = ({ product }) => {
             counter={counter}
             setCounter={setCounter}
             stock={product.stock}
-            onAdd ={onAdd}
+            onAdd={onAdd}
           />
-          {
-            showButton && <Link to="/cart"><button>Finish Buy</button></Link>
-          }
+          {showButton && (
+            <Link className="btn" to="/cart">
+              Finish Buy
+            </Link>
+          )}
           <p>{product.description}</p>
         </div>
       </div>

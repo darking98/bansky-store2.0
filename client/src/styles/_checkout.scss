@@ -1,0 +1,109 @@
+.checkout{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    padding: 0px 300px;
+    color: $primary-color;
+
+    &-confirmation{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $soft-gray;
+        width: 50%;
+        line-height: 30px;
+        border-left: 1px solid $gray;
+        span{
+            font-weight: 800;
+        }
+    }
+    &-form{
+        padding: 0px 50px;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        &-names{
+            input{
+                width: 50%;
+            }
+        }
+        &-country{
+            input{
+                width:33.33%;
+            }
+        }
+
+        input{
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            border: 1px solid $soft-gray;
+            outline: none;
+        }
+        &-button{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+
+            .btn{
+                border: none;
+                background-color: $primary-color;
+                color: $white;
+            }
+        }
+    }
+    &-items{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 50%;
+        padding: 40px;
+        border-left: 1px solid $gray;
+        background-color: $soft-gray;
+        .checkout-total{
+            width: 100%;
+            padding: 20px 0px;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 800;
+        }
+        .checkout-item{
+            display: flex;
+            align-items: center;
+            width: 100%;    
+            padding: 10px 0px;
+            border-bottom: 1px solid $gray;
+            justify-content: space-around;
+
+            span{
+                font-size: 12px;
+            }
+            &-info{
+                display: flex;
+                flex-direction: column;
+                padding: 5px;
+                flex: 1;
+            }
+            &-image{
+                width: 50px;
+                height: 50px;
+                border: 1px solid $gray;
+            
+                img{
+                    height:100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    &-error{
+        color: red;
+        margin-bottom: 10px;
+    }
+}

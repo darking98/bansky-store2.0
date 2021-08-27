@@ -1,13 +1,14 @@
 import React from 'react'
-
+import {IoMdAdd,IoIosRemove} from 'react-icons/io'
 
 const ItemCount = ({stock,onAdd, counter, setCounter}) => {
 
 
-    const handleCounter = (e) => {
-        if(e.target.innerText === '-' && counter !== 1){
+    const handleCounter = (e, symbol) => {
+        console.log(e.target)
+        if(symbol=== '-' && counter !== 1){
             setCounter(counter - 1)
-        }else if(e.target.innerText === '+' && counter < stock){
+        }else if(symbol === '+' && counter < stock){
             setCounter(counter+1);
         }
     }
@@ -16,12 +17,12 @@ const ItemCount = ({stock,onAdd, counter, setCounter}) => {
     return (
         <div className="detail-add-cart">
             <div className="detail-counter">
-                <button onClick={handleCounter}>-</button>
+                <button onClick={(e) => handleCounter(e,'-')}><IoIosRemove/></button>
                     <h4>{counter}</h4>
-                <button onClick={handleCounter}>+</button>
+                <button onClick={(e) => handleCounter(e,'+')}><IoMdAdd/></button>
             </div>
-            <div className="detail-button-container" style={{width:'200px'}}>
-                <button onClick={onAdd}>Add to cart</button>
+            <div className="detail-button-container">
+                <button className="btn" onClick={onAdd}>Add to cart</button>
             </div>
             
         </div>

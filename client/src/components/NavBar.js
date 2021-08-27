@@ -1,27 +1,27 @@
-import React from 'react'
-import {FaShoppingCart} from 'react-icons/fa'
+import React,{useState} from 'react'
+import {RiShoppingCart2Line} from 'react-icons/ri'
 import {VscAccount} from 'react-icons/vsc'
 import CartMenu from './CartMenu'
 import { Link } from 'react-router-dom'
 
-const NavBar = ({openMenu, setOpenMenu}) => {
-
+const NavBar = () => {
+    const [openMenu,setOpenMenu] = useState(false);
     return (
         <header>
             <nav>
                 <div className="nav-items">
                     <ul className="nav-items-ul ">
-                        <li><Link to='/category/buzo'>Buzos</Link></li>
-                        <li><Link to='/category/campera'>Camperas</Link></li>
-                        <li><Link to ="/category/pantalon">Pantalones</Link></li>
-                        <li><Link to="/category/zapatilla">Zapatillas</Link></li>
-                        <li><Link to ="/category/remera">Remeras</Link></li>
+                        <li><Link to='/category/buzos'>Buzos</Link></li>
+                        <li><Link to='/category/camperas'>Camperas</Link></li>
+                        <li><Link to ="/category/pantalones">Pantalones</Link></li>
+                        <li><Link to="/category/zapatillas">Zapatillas</Link></li>
+                        <li><Link to ="/category/remeras">Remeras</Link></li>
                         <li><Link to={'/products'}>New Arraivals</Link></li>
                     </ul>
                 </div>
 
                     <div className="nav-logo">
-                        <img src="https://darking98.github.io/banskyStore/img/logo.png" alt="" width="100px"/>
+                        <Link to="/"><img src="https://darking98.github.io/banskyStore/img/logo.png" alt="" width="100px"/></Link>
                     </div>
                     <div className="nav-items">
                         <ul className="nav-items-ul ">
@@ -32,8 +32,8 @@ const NavBar = ({openMenu, setOpenMenu}) => {
                    
                     <div className="nav-items-icons">
                         <VscAccount/>
-                        <CartMenu openMenu={openMenu} setOpenMenu ={setOpenMenu}>
-                            <FaShoppingCart
+                        <CartMenu openMenu={openMenu} setOpenMenu={setOpenMenu}>
+                            <RiShoppingCart2Line
                                 onClick={() => setOpenMenu(!openMenu)}
                             />
                         </CartMenu>

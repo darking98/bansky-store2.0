@@ -7,15 +7,15 @@ import Cart from "./components/Cart";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Checkout from "./components/Checkout";
+import Footer from "./components/Footer";
 
 function App() {
-  const [openMenu, setOpenMenu] = useState(false);
+  
 
   return (
     <CartProvider>
       <Router>
-        <NavBar openMenu={openMenu} setOpenMenu={setOpenMenu} />
-        <div className={openMenu && 'dark-background'}>
+        <NavBar/>
           <Switch>
             <Route path={"/"} exact component={Home} />
             <Route path={"/products"} component={ItemListContainer} />
@@ -24,7 +24,7 @@ function App() {
             <Route path ={"/cart"} component ={Cart}/>
             <Route path={"/checkout"} component={Checkout}/>
           </Switch>
-        </div>
+        <Footer/>
       </Router>
     </CartProvider>
   );

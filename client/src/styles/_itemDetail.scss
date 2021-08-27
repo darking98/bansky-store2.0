@@ -16,6 +16,9 @@
         padding: 20px;
         flex: 1;
 
+        &>.btn{
+            border: 1px solid $primary-color;
+        }
         a{
             align-self: center;
             button{
@@ -50,14 +53,23 @@
         justify-content: space-between;
         align-items: center;
         border: 1px solid gray;
-        border-radius: 10px;
-        padding: 0px 20px;
+        padding: 10px 20px;
         button{
+            display: flex;
+            align-items: center;
             background: none;
             border: none;
-            color: blue;
             font-size: 30px;
             cursor: pointer;
+
+            svg{
+                font-size: 12px;
+                color: $black;
+                opacity: 0.6;
+                &:hover{
+                    opacity: 1;
+                }
+            }
         }
     }
     .detail-button-container{
@@ -65,11 +77,10 @@
         align-items: center;
         justify-content: center;
         margin-top: 20px;
-        button{
-            width: 100%;
-            background:none;
-            border: 1px solid blue;
-            color: blue;
+        .btn{
+            border: none;
+            color: $white;
+            background:$primary-color;
             padding: 10px 20px;
             cursor: pointer;
             border-radius: 5px;

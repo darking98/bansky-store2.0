@@ -1,0 +1,111 @@
+footer{
+    height: 93vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 20px;
+    padding-top: 20px;
+    background-color: $primary-color;
+    font-family: Verdana;
+    font-size: 0.8rem;
+    line-height: 2rem;
+
+    @media (max-width:1000px){
+        display: block;
+        text-align: center;
+        align-self: center;
+        height: auto;
+        h3{
+            margin-top: 50px;
+        }
+    }
+
+    a,h3,p,label, button{
+        color: $white;
+        letter-spacing: 2px;
+    }
+    
+    h3{
+        font-family: Verdana;
+        text-transform: uppercase;
+    }
+
+    input, button{
+        display: inline-block;
+        padding: 15px 10px;
+        background-color:$gray;
+        border: none;
+        transition: all 300ms ease;
+        color: $white;
+        font-family: Verdana;
+    }
+
+    input{
+        width: 50%;
+        outline: none;
+    }
+
+    button{
+        width: 150px;
+        border-radius: 2px;
+        cursor: pointer;
+        text-transform: uppercase;
+        margin-left:10px;
+        &:hover{
+            background-color: $white;
+            color: $primary-color;
+        }
+    }
+
+    .newsletter{
+        grid-column: 2 / span 2;
+
+        label{
+            display: block;
+        }
+    }
+
+    .footer-help{
+        grid-row: 2;
+        grid-column: 2;
+    }
+
+    .footer-shop{
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .footer-social{
+        grid-column: 2;
+        grid-row: 3;
+
+        p{
+    
+            line-height: 1.2rem;
+
+        }
+
+        .fab{
+            margin-top: 20px;
+            margin-right: 20px;
+            font-size: 1.5rem;
+        }
+    }
+
+    .footer-copyright{
+        grid-column: 3 / span 2;
+        grid-row: 4;
+        text-align: center;
+    }
+
+    .footer-company{
+        grid-column: 4;
+        grid-row:2;        
+    }
+
+    .footer-logo{
+        grid-column: 3 / span 2;
+        grid-row:3;
+        text-align: center;
+    }
+}

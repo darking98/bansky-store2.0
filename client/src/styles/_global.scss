@@ -9,12 +9,27 @@
     background-color: rgba(51,41,39,.5)
 }
 
+$primary-color: #212a2f;
+$black:#000;
+$white:#fff;
+$gray: #4d5559;
+$soft-gray:#f1ebe7;
 
-@keyframes menu {
-    from{
-        opacity: 0;
+.btn{
+    padding: 15px 30px;
+    background-color: $white;
+    color: $primary-color;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 300ms ease-in-out;
+    border-radius: 3px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    &:hover{
+        background-color: $primary-color;
+        color: $white;
     }
-    to{
-        opacity: 1;
-    }
+    
 }
+

@@ -1,11 +1,13 @@
-.item-list-container{
-    height: 100vh;
-    width: 100%;
-    padding: 100px 200px;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px;
-    justify-content: center;
-
+.item-list-container-wrapper{
+    min-height: 100vh;
+    .item-list-container{
+        width: 100%;
+        padding: 100px 200px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+        justify-content: center;
     
+        
+    }
 }

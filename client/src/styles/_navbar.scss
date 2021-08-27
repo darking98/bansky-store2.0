@@ -1,16 +1,18 @@
 header{
     width: 100%;
-    //position: fixed;
     height: 7vh;
     padding: 10px 30px;
-    position: relative;
-
+    position: fixed;
+    background-color: $white;
+    z-index: 99;
+    box-shadow: 0px -2px 15px -2px rgba(0,0,0,0.53);
     nav{
         height: 100%;
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        
         .nav-items{
             display: flex;
             &-ul{
@@ -29,7 +31,7 @@ header{
 
                     a{
                         text-decoration: none;
-                        color: black;
+                        color: $primary-color;
                         &:hover{
                             text-decoration: underline;
                         }
@@ -56,20 +58,147 @@ header{
             .nav-cart{
                 display: flex;
                 align-items: center;
-                
-                    &-open{
+                //position: relative;
+                    .nav-container{
+                        display: flex;
+                        justify-content:flex-end ;
                         position: fixed;
+                        left: 0;
                         top: 0;
-                        right: 0;
-                        width: 400px;
                         height: 100vh;
-                        background-color: black;
-                        color: #fff;
+                        width: 100%;
+                        background-color: rgba(0, 0, 0, 0.575);
+                    }
+                    &-open{
+                        padding: 15px;
+                        width: 500px;
+                        height: 100%;
+                        background-color: $white;
+                        color:$primary-color;
                         text-align: end;
-                        animation: menu 300ms ease-in-out;
+                        animation: menuOpen 700ms ease-in-out;
+                        overflow: scroll;
+                        .cart-menu-container{
+                            display: flex;
+                            flex-direction: column;
+                            .cart-menu-footer{
+                                font-size: 14px;
+                                border-bottom:1px solid $soft-gray;
+                                padding: 20px 0px;
+                                &-total{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    line-height: 30px;
+                                    span{
+                                        letter-spacing: 1px;
+                                    }
+                                }
+                                &-buttons{
+                                    width: max-content;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    flex-direction: column;
+                                    margin: auto;
+                                }
+                                &-remove{
+                                    width: 100%;
+                                    margin-top: 20px;
+                                    text-align: center;
+                                    .btn{
+                                        color: $white;
+                                        background-color: $primary-color;
+                                    }
+                                }
+                            }
+                        }
+                        .nav-cart-header{
+                            display: flex;
+                            &-cartIcon{
+                                display: flex;
+                                flex: 1;
+                                align-items: center;
+                                justify-content: center;
+                                a{
+                                    color: $primary-color;
+
+                                }
+                            }
+                        }
+
+                        .cart-menu-item-wrapper{
+                            display: flex;
+                            justify-content: space-between;
+                            border-bottom: 1px solid $soft-gray;
+                            width: 100%;
+                        }
+
+                        .cart-menu-item{
+                            display: flex;
+                            justify-content: center;
+                            text-align: start;
+                            margin-top: 20px;
+                            transition: 300ms ease-in-out;
+                            &:hover{
+                                opacity: 0.8;
+                            }
+                            padding: 20px;
+
+                            
+                            .cart-menu-info{
+                                display: flex;
+                                flex-direction: column;
+                                
+                                .cart-menu-title{
+                                    font-size: 15px;
+                                    font-weight: bold;
+                                    margin: 10px 0px;
+
+                                }
+                                .cart-menu-div{
+                                    text-transform: capitalize;
+                                    font-size: 12px;
+                                }
+                            }
+
+                        }
+
+                        .empty-card{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            text-transform: capitalize;
+                            & > div{
+                                margin-bottom: 20px;
+                            }
+                            &-header{
+                                color: $primary-color;
+                                font-weight: bold;
+                            }
+                            &-links{
+                                display: flex;
+                                flex-direction: column;
+
+                                .btn{
+                                    border: 1px solid $primary-color;
+                                    margin-bottom: 20px;
+                                    text-align: center;
+                                }
+                            }
+                        }
                     }
                 }
         }
 
+    }
+}
+
+@keyframes menuOpen {
+    from{
+        transform: translateX(500px);
+    }
+    to{
+        transform: translateX(0px);
     }
 }
