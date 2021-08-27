@@ -19,6 +19,8 @@ La base de datos esta integrada a firebaseFirestore.
 
 ### Screenshots
 
-![Item Detail Photo](https://i.ibb.co/PhCPnnt/image.png)
+![Item Detail Photo](https://i.ibb.co/K9xs6xt/bansky-home.png)
 
-![Item Gallery](https://i.ibb.co/2kz5mPZ/image.png)
+![Item Gallery](https://i.ibb.co/DfFkXVY/bansky-home.png)
+
+![Cart](https://i.ibb.co/8MzmZf2/bansky-home.png)
